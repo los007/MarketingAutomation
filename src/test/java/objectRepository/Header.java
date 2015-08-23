@@ -5,9 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import setUpClasses.AbstractPage;
-import sun.jvm.hotspot.debugger.Page;
+
 
 public class Header extends AbstractPage {
+
     //Home icon
     @FindBy(xpath = ".//*[@id='navbar']/div[2]/div/div[1]/a/span[1]")
     private static WebElement home;
@@ -32,12 +33,16 @@ public class Header extends AbstractPage {
     public static void clickHealthCoachIcon(){healthCoach.click();
     PageFactory.initElements(driver, new HealthCoachingPage());}
 
-
-   //About Us
+    //About Us
     @FindBy (xpath = ".//*[@id='navbar']/div[2]/div/div[2]/nav/ul/li[4]/a")
     private static WebElement about;
     public static void clickAboutUsIcon(){about.click();
     PageFactory.initElements(driver, new AboutUsPage());}
+
+    //Phone Number
+    @FindBy (xpath = "//p[@class='telephone-number']")
+    public static WebElement phoneNumber;
+
 
     //Contact Us
     @FindBy (xpath = ".//*[@id='secondary-menu']/li/a")
@@ -48,8 +53,8 @@ public class Header extends AbstractPage {
     //Search
     @FindBy (id = "edit-search-block-form--2")
     private static WebElement search;
-    public static void conductSearch(String input){
-        search.sendKeys(input);
+    public static void conductSearch(String term){
+        search.sendKeys(term);
         search.sendKeys(Keys.RETURN);}
 
 

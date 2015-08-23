@@ -4,6 +4,7 @@ import objectRepository.Header;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,13 +16,16 @@ public class DriverInitialization  {
 
     @BeforeClass
     public static void createEnvironment() {
+        //driver = new ChromeDriver();
         driver = new FirefoxDriver();
-        driver.get("http://www.integrativenutrition.com/info-sessions");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.get("http://www.integrativenutrition.com/curriculum");
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         PageFactory.initElements(driver, new Header());}
 
     @AfterClass
-    public static void tearDownEnvironment(){driver.quit();}
+    public static void tearDownEnvironment(){
+        driver.quit();
+        }
 
     }
 
