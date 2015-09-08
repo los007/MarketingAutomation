@@ -43,7 +43,6 @@ public class Header extends AbstractPage {
     @FindBy (xpath = "//p[@class='telephone-number']")
     public static WebElement phoneNumber;
 
-
     //Contact Us
     @FindBy (xpath = ".//*[@id='secondary-menu']/li/a")
     private static WebElement contact;
@@ -56,6 +55,7 @@ public class Header extends AbstractPage {
     public static void conductSearch(String term){
         search.sendKeys(term);
         search.sendKeys(Keys.RETURN);}
+        //
 
 
 }

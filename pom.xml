@@ -17,7 +17,7 @@
             <version>2.47.1</version>
         </dependency>
 
-        <!-- JUnit Dependancy-->
+        <!-- JUnit Dependency-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

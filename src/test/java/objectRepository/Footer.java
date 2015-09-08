@@ -2,27 +2,28 @@ package objectRepository;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import setUpClasses.AbstractPage;
 
 public class Footer extends AbstractPage {
 
-
     //*** Page Links **********************************************************************************************
 
     //Curriculum link - click on the link method
-    @FindBy(xpath = "//a[@href='/curriculum']")
+    @FindBy(xpath = ".//*[@id='footer-menu-2']/li[1]/a")
     private static WebElement curricLink;
     public static void clickCurriculumLink(){curricLink.click();}
+   // PageFactory.initElements(driver, new CurriculumPage());}
 
     //Learning Center - click on the link method
-    @FindBy(xpath = "//a[@href='http://www.integrativenutrition.com/curriculum#learningcenter']")
+    @FindBy(xpath = ".//*[@id='footer-menu-2']/li[1]/ul/li[1]/a")
     private static WebElement learningCLink;
     public static void clickLearningCenterLink(){learningCLink.click();}
 
     //Visiting Teachers - click on the link method
     @FindBy(xpath = "//a[@href='http://www.integrativenutrition.com/curriculum#visitingteachers']")
     private static WebElement visitTeachLink;
-    public static void clickVisitingteachersLink(){visitTeachLink.click();}
+    public static void clickVisitingTeachersLink(){visitTeachLink.click();}
 
     //Business Training - click on the link method
     @FindBy(xpath = "//a[@href='http://www.integrativenutrition.com/curriculum#businesstraining']")
@@ -30,7 +31,7 @@ public class Footer extends AbstractPage {
     public static void clickBusinessTrainingLink(){businessT.click();}
 
     //Health Coaching - click on the link method
-    @FindBy(xpath = "//a[@href='/health-coaching']")
+    @FindBy(xpath = ".//*[@id='footer-menu-2']/li[2]/a")
     private static WebElement healthCoachingLink;
     public static void clickHealthCoachingLink(){healthCoachingLink.click();}
 
@@ -44,13 +45,13 @@ public class Footer extends AbstractPage {
     private static WebElement gradSuccessLink;
     public static void clickGradSuccessLink(){gradSuccessLink.click();}
 
-    //What is a HC - click on the link method
+    //Passionate Career - click on the link method
     @FindBy(xpath = "//a[@href='http://www.integrativenutrition.com/health-coaching#careerpassion']")
     private static WebElement careerPassionLink;
     public static void clickCareerPassionLink(){careerPassionLink.click();}
 
     //Info Sessions - click on the link method
-    @FindBy(xpath = "//a[@href='/info-sessions']")
+    @FindBy(xpath = ".//*[@id='footer-menu-2']/li[3]/a")
     private static WebElement infoSessLink;
     public static void clickInfoSessionsLink(){infoSessLink.click();}
 
@@ -60,7 +61,7 @@ public class Footer extends AbstractPage {
     public static void clickMeetFounderLink(){meetFounderLink.click();}
 
     //Student Experience - click on the link method
-    @FindBy(xpath = "//a[@href='http://www.integrativenutrition.com/info-sessions#student-experience']")
+    @FindBy(xpath = "//a[@href='http://www.integrativenutrition.com/info-sessions#studentexperience']")
     private static WebElement studentExperienceLink;
     public static void clickStudentExperienceLink(){studentExperienceLink.click();}
 
@@ -75,7 +76,7 @@ public class Footer extends AbstractPage {
     public static void clickMyYourHealthLink(){myHealthyLink.click();}
 
     //About Us - click on the link method
-    @FindBy(xpath = "//a[@href='/about-us']")
+    @FindBy(xpath = ".//*[@id='footer-menu-2']/li[4]/a")
     private static WebElement aboutUsLink;
     public static void clickAboutUsLink(){aboutUsLink.click();}
 
@@ -93,6 +94,11 @@ public class Footer extends AbstractPage {
     @FindBy(xpath = "//a[@href='http://www.integrativenutrition.com/about-us#advisors']")
     private static WebElement advisorBoardLink;
     public static void clickAdvisorBoardLink(){advisorBoardLink.click();}
+
+    //Reviews - click on the link method
+    @FindBy(xpath = ".//*[@id='footer-menu-2']/li[4]/ul/li[4]/a")
+    private static WebElement reviewsLink;
+    public static void clickReviewsLink(){reviewsLink.click();}
 
     //Blog - click on the link method
     @FindBy(xpath = "//a[@href='/blog']")
@@ -133,9 +139,9 @@ public class Footer extends AbstractPage {
     //*** Connect With Us *****************************************************************************************
 
     //Facebook - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_facebookcircle']")
-    private static WebElement facebookIcon;
-    public static void clickFacebookIcon(){facebookIcon.click();}
+    @FindBy(xpath = "//span[@class=con-font_facebookcircle")
+    private static WebElement faceBookIcon;
+    public static void clickFacebookIcon(){faceBookIcon.click();}
 
     //Twitter - click on the icon method
     @FindBy(xpath = "//i[@class='icon-font_twittercircle']")
@@ -161,6 +167,11 @@ public class Footer extends AbstractPage {
     @FindBy(xpath = "//i[@class='icon-font_vinecircle']")
     private static WebElement vineIcon;
     public static void clickVineIcon(){vineIcon.click();}
+
+    //Google Plus - click on the icon method
+    @FindBy(xpath = "//i[@class='icon-font_googlecircle']")
+    private static WebElement googlePlusIcon;
+    public static void clickGPlusIcon(){googlePlusIcon.click();}
 
     //Amazon - click on the icon method
     @FindBy(xpath = "//i[@class='icon-font_amazoncircle']")

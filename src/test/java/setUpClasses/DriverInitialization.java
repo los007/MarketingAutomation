@@ -1,11 +1,14 @@
 package setUpClasses;
 
+import objectRepository.Footer;
 import objectRepository.Header;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
@@ -16,11 +19,17 @@ public class DriverInitialization  {
 
     @BeforeClass
     public static void createEnvironment() {
-        //driver = new ChromeDriver();
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+        //driver = new SafariDriver();
+
+        driver.manage().deleteAllCookies();
         driver.get("http://www.integrativenutrition.com/curriculum");
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        PageFactory.initElements(driver, new Header());}
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+        //Initialize all pages
+        PageFactory.initElements(driver, new Header());
+        PageFactory.initElements(driver, new Footer());}
 
     @AfterClass
     public static void tearDownEnvironment(){
