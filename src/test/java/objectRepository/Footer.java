@@ -116,22 +116,22 @@ public class Footer extends AbstractPage {
     public static void clickHealthTrendsLink(){healthTrends.click();}
 
     //Regulatory Information - click on the link method
-    @FindBy(xpath = "//a[@href='/about/regulatory']")
+    @FindBy(xpath = ".//*[@id='footer-menu']/li[1]/a")
     private static WebElement regInfoLink;
     public static void clickRegulatoryInfoLink(){regInfoLink.click();}
 
     //Terms & Privacy Policy - click on the link method
-    @FindBy(xpath = "//a[@href='/lp/privacypolicy']")
+    @FindBy(xpath = ".//*[@id='footer-menu']/li[2]/a")
     private static WebElement termsPrivacyLink;
     public static void clickTermsPrivacyLink(){termsPrivacyLink.click();}
 
     //Affiliates - click on the link method
-    @FindBy(xpath = "//a[@href='/affiliates']")
+    @FindBy(xpath = ".//*[@id='footer-menu']/li[3]/a")
     private static WebElement affiliatesLink;
     public static void clickAffiliatesLink(){affiliatesLink.click();}
 
     //Jobs - click on the link method
-    @FindBy(xpath = "//a[@href='/jobs']")
+    @FindBy(xpath = ".//*[@id='footer-menu']/li[4]/a")
     private static WebElement jobsLink;
     public static void clickJobsLink(){jobsLink.click();}
 
@@ -139,49 +139,54 @@ public class Footer extends AbstractPage {
     //*** Connect With Us *****************************************************************************************
 
     //Facebook - click on the icon method
-    @FindBy(xpath = "//span[@class=con-font_facebookcircle")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[1]/li[1]/a/span[1]/i")
     private static WebElement faceBookIcon;
     public static void clickFacebookIcon(){faceBookIcon.click();}
 
     //Twitter - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_twittercircle']")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[1]/li[2]/a/span[1]/i")
     private static WebElement twitterIcon;
     public static void clickTwitterIcon(){twitterIcon.click();}
 
     //Tumbler - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_tumblrcircle']")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[1]/li[3]/a/span[1]/i")
     private static WebElement tumblerIcon;
     public static void clickTumblerIcon(){tumblerIcon.click();}
 
     //Youtube - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_youtubecircle']")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[2]/li[1]/a/span[1]/i")
     private static WebElement youtubeIcon;
     public static void clickyouTubeIcon(){youtubeIcon.click();}
 
     //LinkedIn - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_linkedincircle']")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[2]/li[2]/a/span[1]/i")
     private static WebElement linkedInIcon;
     public static void clickLinkedInIcon(){linkedInIcon.click();}
 
     //Vine - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_vinecircle']")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[2]/li[3]/a/span[1]/i")
     private static WebElement vineIcon;
     public static void clickVineIcon(){vineIcon.click();}
 
     //Google Plus - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_googlecircle']")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[3]/li[1]/a/span[1]/i")
     private static WebElement googlePlusIcon;
     public static void clickGPlusIcon(){googlePlusIcon.click();}
 
     //Amazon - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_amazoncircle']")
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[3]/li[2]/a/span[1]/i")
     private static WebElement amazonIcon;
     public static void clickAmazonIcon(){amazonIcon.click();}
 
     //SnapChat - click on the icon method
-    @FindBy(xpath = "//i[@class='icon-font_snapchatcircle']")
-    private static WebElement snapchatIcon;
+    @FindBy(xpath = "html/body/footer/div[1]/div/div[2]/div[3]/ul[3]/li[3]/a/span[1]/i")
+    public static WebElement snapchatIcon;
 
 
 
-}
+
+    }
+
+
+
+

@@ -12,32 +12,28 @@ public class Header extends AbstractPage {
     //Home icon
     @FindBy(xpath = ".//*[@id='navbar']/div[2]/div/div[1]/a/span[1]")
     private static WebElement home;
-    public static void clickHomeIcon(){home.click();
-    PageFactory.initElements(driver, new HomePage());}
+    public static void clickHomeIcon(){home.click();}
 
     //Curriculum icon
     @FindBy (xpath = ".//*[@id='navbar']/div[2]/div/div[2]/nav/ul/li[1]/a")
     private static WebElement curriculum;
-    public static void clickCurriculumIcon(){curriculum.click();
-    PageFactory.initElements(driver, new CurriculumPage());}
+    public static void clickCurriculumIcon(){curriculum.click();}
+
 
     //Info sessions icon
     @FindBy (xpath = ".//*[@id='navbar']/div[2]/div/div[2]/nav/ul/li[2]/a")
     private static WebElement info;
-    public static void clickInfoSessionsIcon(){info.click();
-    PageFactory.initElements(driver, new InfoSessionsPage());}
+    public static void clickInfoSessionsIcon(){info.click();}
 
     //Health Coaching icon
     @FindBy (xpath = ".//*[@id='navbar']/div[2]/div/div[2]/nav/ul/li[3]/a")
     private static WebElement healthCoach;
-    public static void clickHealthCoachIcon(){healthCoach.click();
-    PageFactory.initElements(driver, new HealthCoachingPage());}
+    public static void clickHealthCoachIcon(){healthCoach.click();}
 
     //About Us
     @FindBy (xpath = ".//*[@id='navbar']/div[2]/div/div[2]/nav/ul/li[4]/a")
     private static WebElement about;
-    public static void clickAboutUsIcon(){about.click();
-    PageFactory.initElements(driver, new AboutUsPage());}
+    public static void clickAboutUsIcon(){about.click();}
 
     //Phone Number
     @FindBy (xpath = "//p[@class='telephone-number']")
@@ -46,8 +42,7 @@ public class Header extends AbstractPage {
     //Contact Us
     @FindBy (xpath = ".//*[@id='secondary-menu']/li/a")
     private static WebElement contact;
-    public static void clickContactUsIcon(){contact.click();
-    PageFactory.initElements(driver, new ContactUsPage());}
+    public static void clickContactUsIcon(){contact.click();}
 
     //Search
     @FindBy (id = "edit-search-block-form--2")

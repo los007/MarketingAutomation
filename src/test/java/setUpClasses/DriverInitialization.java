@@ -1,7 +1,6 @@
 package setUpClasses;
 
-import objectRepository.Footer;
-import objectRepository.Header;
+import objectRepository.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
@@ -19,8 +18,8 @@ public class DriverInitialization  {
 
     @BeforeClass
     public static void createEnvironment() {
-        //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
+        //driver = new ChromeDriver();
         //driver = new SafariDriver();
 
         driver.manage().deleteAllCookies();
@@ -29,11 +28,18 @@ public class DriverInitialization  {
 
         //Initialize all pages
         PageFactory.initElements(driver, new Header());
-        PageFactory.initElements(driver, new Footer());}
+        PageFactory.initElements(driver, new Footer());
+        PageFactory.initElements(driver, new Forms());
+        PageFactory.initElements(driver, new HomePage());
+        PageFactory.initElements(driver, new CurriculumPage());
+        PageFactory.initElements(driver, new InfoSessionsPage());
+        PageFactory.initElements(driver, new HealthCoachingPage());
+        PageFactory.initElements(driver, new AboutUsPage());
+        PageFactory.initElements(driver, new ContactUsPage());
+    }
 
     @AfterClass
-    public static void tearDownEnvironment(){
-        driver.quit();
+    public static void tearDownEnvironment(){driver.quit();
         }
 
     }

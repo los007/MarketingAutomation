@@ -31,6 +31,17 @@ public class HeaderTests extends DriverInitialization {
 
     //*** This section is to test that all header links go to their respective pages on click ************************
 
+    @Test //Home link
+    public void headerHomeIcon() {
+        Header.clickHomeIcon();
+        String currentUrl = driver.getCurrentUrl();
+        try {
+            Assert.assertEquals(currentUrl, "http://www.integrativenutrition.com/");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Test //Contact Us link
     public void headerContactUs() {
         Header.clickContactUsIcon();
