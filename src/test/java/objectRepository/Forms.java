@@ -66,6 +66,7 @@ public class Forms extends AbstractPage {
 
     /* Form webform-client-form-6061 located in the following pages:
         Curriculum page - http://www.integrativenutrition.com/curriculum
+        Health Coaching page - http://www.integrativenutrition.com/health-coaching
 
     */
 
@@ -116,9 +117,20 @@ public class Forms extends AbstractPage {
 
     //Privacy Policy link
     @FindBy(xpath = ".//*[@id='webform-client-form-6061']/div/p/small/a")
-    private static WebElement form6061privacy;
+    private static WebElement form6061Privacy;
     public static void click6061PrivacyLink(){
-        form6061privacy.click();
+        form6061Privacy.click();
     }
 
-}
+
+     /*
+        This is where Joshuas Info Session form will gio
+    */
+
+
+     /* Form webform-client-form-6061 located in the following pages:
+        Curriculum page - http://www.integrativenutrition.com/curriculum
+
+    */
+
+    }
