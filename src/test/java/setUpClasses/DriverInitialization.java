@@ -36,6 +36,7 @@ public class DriverInitialization  {
         PageFactory.initElements(driver, new HealthCoachingPage());
         PageFactory.initElements(driver, new AboutUsPage());
         PageFactory.initElements(driver, new ContactUsPage());
+        PageFactory.initElements(driver, new BlogElements());
     }
 
 
