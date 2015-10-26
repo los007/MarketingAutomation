@@ -106,6 +106,7 @@ public class FooterSocialMedia extends DriverInitialization {
             e.printStackTrace();
         }
 
+        /*
         //Navigate back to the home window
         driver.switchTo().window(home);
 
@@ -116,9 +117,7 @@ public class FooterSocialMedia extends DriverInitialization {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+    */
     }
-
-
 
 }

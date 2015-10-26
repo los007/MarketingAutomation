@@ -6,14 +6,6 @@ import setUpClasses.AbstractPage;
 
 public class Forms extends AbstractPage {
 
-    /* This form is used on the following pages:
-        Homepage - http://www.integrativenutrition.com/
-        Curriculum - http://www.integrativenutrition.com/curriculum
-        Health Coaching - http://www.integrativenutrition.com/health-coaching
-        Joshua's Info Session - http://www.integrativenutrition.com/info-sessions
-        All paid lead gen pages - http://www.integrativenutrition.com/sample-class-new
-    */
-
     //First Name text box
     @FindBy(id = "edit-submitted-firstname")
     private static WebElement formName;
@@ -41,17 +33,15 @@ public class Forms extends AbstractPage {
     }
 
     //Country flag dropdown
-    @FindBy(xpath = "//div[@class='flag-dropdown']")
-    //*[@id='webform-component-Home-Phone--c']/div[1]/div/div
+    @FindBy(xpath = "//div[@class='selected-flag']")
     private static WebElement formFlag;
-
     public static void selectFlag() {
         formFlag.click();
     }
 
     //Phone text field
     @FindBy(id = "edit-submitted-home-phone-c")
-    private static WebElement formPhone;
+    public static WebElement formPhone;
 
     public static void enterPhoneNumber(String phone) {
         formPhone.click();

@@ -2,10 +2,18 @@ package testScripts;
 import objectRepository.Forms;
 import objectRepository.PaidLeadGen;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import setUpClasses.DriverInitialization;
 
 public class PageLeadTests extends DriverInitialization {
+
+    @Before
+    public void clearCookies() {
+        driver.manage().deleteAllCookies();
+    }
 
 //*** These tests are for the Paid Lead Gen pages
 
@@ -49,8 +57,8 @@ public class PageLeadTests extends DriverInitialization {
             e.printStackTrace();
         }
     }
-    /*
-    @Test //Tests that flags match country code using FIji
+
+    @Test //Tests that flags match country code using Fiji
     public void countryFlagMatch() {
         driver.get("http://www.integrativenutrition.com/info-nutritioneducation");
         Forms.selectFlag();
@@ -58,27 +66,16 @@ public class PageLeadTests extends DriverInitialization {
         fiji.click();
         Forms.enterPhoneNumber("1111111111");
         Forms.clickSubmitButton();
-     */
-
-    /*
-        public void showThings(subbed){
-
-        return subbed;
-    };
-        String returnedPhone = return Forms.formPhone.getText();
-        showMessageDialog(null,returnedPhone);
-        System.out.println(returnedPhone);
-        int rawPhone = Integer.parseInt(returnedPhone);
-        System.out.println(rawPhone);
-
-      //  boolean countryCode = rawPhone.contains(679);
-
+        String phoneValue = Forms.formPhone.getAttribute("value");
+        boolean fijiFlag = phoneValue.contains("679");
         try {
-            Assert.assertTrue(countryCode);
+            Assert.assertTrue(fijiFlag);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        */
+
+    }
+
     @Test //Tests that form submits properly
     public void formSubmit() {
         driver.get("http://www.integrativenutrition.com/info-nutritioneducation");
@@ -113,9 +110,9 @@ public class PageLeadTests extends DriverInitialization {
         driver.get("http://www.integrativenutrition.com/info-nutritioneducation-r");
         Forms.inputEmail("paidLeadTest@qatest.edu");
         Forms.clickSubmitButton();
-        String currentUrl = driver.getCurrentUrl();
+        boolean currentUrl = driver.getCurrentUrl().contains("http://www.integrativenutrition.com/info-nutritioneducation-r");
         try {
-            Assert.assertEquals(currentUrl, "http://www.integrativenutrition.com/info-nutritioneducation-r");
+            Assert.assertTrue(currentUrl);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -126,43 +123,33 @@ public class PageLeadTests extends DriverInitialization {
         driver.get("http://www.integrativenutrition.com/info-nutritioneducation-r");
         Forms.inputName("qaTest");
         Forms.clickSubmitButton();
-        String currentUrl = driver.getCurrentUrl();
+        boolean currentUrl = driver.getCurrentUrl().contains("http://www.integrativenutrition.com/info-nutritioneducation-r");
         try {
-            Assert.assertEquals(currentUrl, "http://www.integrativenutrition.com/info-nutritioneducation-r");
+            Assert.assertTrue(currentUrl);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    /*
-    @Test //Tests that flags match country code using FIji
+
+    @Test //Tests that flags match country code using Jamaica
     public void countryFlagMatchR() {
-        driver.get("http://www.integrativenutrition.com/info-nutritioneducation-r");
+        driver.get("http://www.integrativenutrition.com/info-nutritioneducation-r3");
+        Forms.clickPhoneBox();
         Forms.selectFlag();
-        WebElement fiji = driver.findElement(By.xpath(".//*[@id='webform-component-Home-Phone--c']/div[1]/div/ul/li[76]/span[1]"));
-        fiji.click();
+        WebElement jamaica = driver.findElement(By.xpath(".//*[@id='webform-component-Home-Phone--c']/div[1]/div/ul/li[108]/span[1]"));
+        jamaica.click();
         Forms.enterPhoneNumber("1111111111");
         Forms.clickSubmitButton();
-     */
-
-    /*
-        public void showThings(subbed){
-
-        return subbed;
-    };
-        String returnedPhone = return Forms.formPhone.getText();
-        showMessageDialog(null,returnedPhone);
-        System.out.println(returnedPhone);
-        int rawPhone = Integer.parseInt(returnedPhone);
-        System.out.println(rawPhone);
-
-      //  boolean countryCode = rawPhone.contains(679);
-
+        String phoneValue = Forms.formPhone.getAttribute("value");
+        boolean jamiacaFlag = phoneValue.contains("876");
         try {
-            Assert.assertTrue(countryCode);
+            Assert.assertTrue(jamiacaFlag);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        */
+    }
+
     @Test //Tests that form submits properly
     public void formSubmitR() {
         driver.get("http://www.integrativenutrition.com/info-nutritioneducation-r");
@@ -217,36 +204,24 @@ public class PageLeadTests extends DriverInitialization {
             e.printStackTrace();
         }
     }
-    /*
-    @Test //Tests that flags match country code using FIji
-    public void countryFlagMatch() {
-        driver.get("http://www.integrativenutrition.com/info-nutritioneducation");
+
+    @Test //Tests that flags match country code using Uruguay
+    public void countryFlagMatchD() {
+        driver.get("http://www.integrativenutrition.com/info-nutritioneducation-d");
         Forms.selectFlag();
-        WebElement fiji = driver.findElement(By.xpath(".//*[@id='webform-component-Home-Phone--c']/div[1]/div/ul/li[76]/span[1]"));
-        fiji.click();
+        WebElement uruguay = driver.findElement(By.xpath(".//*[@id='webform-component-Home-Phone--c']/div[1]/div/ul/li[230]/span[1]"));
+        uruguay.click();
         Forms.enterPhoneNumber("1111111111");
         Forms.clickSubmitButton();
-     */
-
-    /*
-        public void showThings(subbed){
-
-        return subbed;
-    };
-        String returnedPhone = return Forms.formPhone.getText();
-        showMessageDialog(null,returnedPhone);
-        System.out.println(returnedPhone);
-        int rawPhone = Integer.parseInt(returnedPhone);
-        System.out.println(rawPhone);
-
-      //  boolean countryCode = rawPhone.contains(679);
-
+        String phoneValue = Forms.formPhone.getAttribute("value");
+        boolean uruguayFlag = phoneValue.contains("598");
         try {
-            Assert.assertTrue(countryCode);
+            Assert.assertTrue(uruguayFlag);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        */
+    }
+
     @Test //Tests that form submits properly
     public void formSubmitD() {
         driver.get("http://www.integrativenutrition.com/info-nutritioneducation-d");

@@ -37,12 +37,12 @@ public class DriverInitialization  {
         PageFactory.initElements(driver, new AboutUsPage());
         PageFactory.initElements(driver, new ContactUsPage());
         PageFactory.initElements(driver, new BlogElements());
+        PageFactory.initElements(driver, new PaidLeadGen());
     }
-
 
     @AfterClass
     public static void tearDownEnvironment(){driver.quit();
-        }
-
     }
+
+}
 
